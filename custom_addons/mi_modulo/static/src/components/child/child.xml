@@ -1,0 +1,16 @@
+<template>
+   <t t-name="mi_modulo.Child" owl="1">
+      <t t-slot="default"/>
+      <h1>Contador: <t t-out="props.counter"/></h1>
+      <p><t t-esc="props.title"/></p> 
+      <ol>
+      <t t-foreach="props.list" t-as="item" t-key="item_index">
+            <li><t t-out="item"/></li>
+            <li t-out="item"/>        
+      </t>      
+      </ol>   
+      <button class="btn btn-primary m-5" t-on-click="focusInput">Focus Input</button>  
+      <input class="form-input input m-5" t-ref="myInput"/> 
+      <t t-out="env.data"/>
+   </t> 
+</template>

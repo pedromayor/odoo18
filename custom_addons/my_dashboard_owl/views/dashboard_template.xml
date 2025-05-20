@@ -1,0 +1,26 @@
+<odoo>
+  <!-- Dashboard page template -->
+  <template id="dashboard_page" name="OWL Dashboard">
+    <t t-call="web.base_layout">
+      <div class="o_content">
+        <div class="o_dashboard_container" id="owl_dashboard"></div>
+      </div>
+    </t>
+  </template>
+
+  <!-- Client action to show dashboard -->
+  <record id="action_owl_dashboard" model="ir.actions.client">
+    <field name="name">OWL Dashboard</field>
+    <field name="tag">my_owl_dashboard_action</field>
+    <field name="target">current</field>
+  </record>
+  <menuitem id="menu_owl_dashboard_root"
+            name="OWL Dashboard"
+            sequence="10"/>
+
+  <menuitem id="menu_owl_dashboard"
+            name="Dashboard"
+            parent="menu_owl_dashboard_root"
+            action="action_owl_dashboard"
+            sequence="1"/>
+</odoo>

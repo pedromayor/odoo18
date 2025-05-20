@@ -1,0 +1,9 @@
+<template>
+   <t t-name="mi_modulo.Example" owl="1">
+      <p>Hola OWL!</p>
+      <button t-on-click="increment" t-on-dblclick="alertMessage" class="btn btn-primary">Click</button> 
+      <Child title="'Hola desde el hijo!'" list="['Odoo', 'Armin', 'OWL']" counter="this.state.counter">  
+         <span>Esto es un slot y deberia de ir primero</span>
+      </Child> 
+   </t> 
+</template>

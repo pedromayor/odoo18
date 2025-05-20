@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Run Odoo",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "C:/Users/Pedro Mayor/Desktop/odoo18/odoo/odoo-bin",
+                "console": "integratedTerminal",
+                "args": [
+                    "-d",
+                    "abce_odoo18-1",
+                    "--addons-path",
+                    "odoo/addons,odoo-enterprise-18,design-themes,custom_addons",
+                    "--dev",
+                    "all",
+                    "-u",
+                    "mi_modulo",
+                ],
+                "python": "C:/Users/Pedro Mayor/Desktop/odoo18/new_venv/Scripts/python.exe",  
+         }
+    ]
+}
